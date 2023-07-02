@@ -10,6 +10,9 @@ import time
 # Web Scraping Library
 import src.scraper as scraper
 
+# Configuration
+import config
+
 # Countries list (EN Site)
 countries = [
     "AUS",  # Australia
@@ -32,12 +35,6 @@ countries = [
 
 # Base url for the query
 BASE_URL = "https://wanganmaxi-official.com/wanganmaxi6rr/en/locations/list"
-
-# Delay (In seconds) between queries
-DELAY = 2
-
-# Json output indent (spaces)
-INDENT = 2
 
 # Output folder name
 OUTPUT = "out_en"
@@ -69,7 +66,7 @@ if __name__ == '__main__':
             filepath = os.path.join(OUTPUT, filename)
 
             # Dump stores to json
-            stores_json = json.dumps(stores, indent=INDENT)
+            stores_json = json.dumps(stores, indent=config.INDENT)
 
             # Open the output file
             with open(filepath, "w+") as f:
@@ -87,7 +84,7 @@ if __name__ == '__main__':
 
         finally:  # Success or failure
 
-            print(f"Sleeping for {DELAY} seconds ...")
+            print(f"Sleeping for {config.DELAY} seconds ...")
 
             # Sleep for 'delay' seconds
-            time.sleep(DELAY)
+            time.sleep(config.DELAY)
