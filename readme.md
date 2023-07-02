@@ -1,5 +1,5 @@
 # WMMT6RR Store Location Scraper
-## Created by Damon Murdoch [@SirScrubbington](https://twitter.com/SirScrubbington)
+## Created by Damon Murdoch ([@SirScrubbington](https://twitter.com/SirScrubbington))
 
 ## Description
 
